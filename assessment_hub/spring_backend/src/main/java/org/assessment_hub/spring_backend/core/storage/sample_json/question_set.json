@@ -1,0 +1,71 @@
+{
+    "question_set_id":1,
+    "questions":[
+        {
+            "id":1,
+            "marks":2,
+            "type":"mcq",
+            "question":"Which of the following statements are TRUE regarding the 'final' keyword in Java? (Select all that apply)",
+            "options":[
+                {
+                    "id":"A",
+                    "text":"A final variable can be reassigned only once inside a static block."
+                },
+                {
+                    "id":"B",
+                    "text":"A final method cannot be overridden by a subclass."
+                },
+                {
+                    "id":"C",
+                    "text":"A final class cannot be extended or inherited."
+                },
+                {
+                    "id":"D",
+                    "text":"A blank final instance variable can be initialized inside any ordinary method of the class."
+                }
+            ]
+        },
+        {
+            "id":2,
+            "marks":3,
+            "type":"mcq",
+            "question":"Identify valid functional interfaces provided in the java.util.function package: (Select all that apply).",
+            "options":[
+                {
+                    "id":"A",
+                    "text":"Predicate<T>"
+                },
+                {
+                    "id":"B",
+                    "text":"Consumer<T>"
+                },
+                {
+                    "id":"C",
+                    "text":"Transformer<T, R>"
+                },
+                {
+                    "id":"D",
+                    "text":"Supplier<T>"
+                }
+            ]
+        },
+        {
+            "id":3,
+            "marks":2,
+            "type":"fb",
+            "question":"In Java, an exception that extends RuntimeException is classified as a/an ____ exception and is checked at ____ time."
+        },
+        {
+            "id":4,
+            "marks":2,
+            "type":"fb",
+            "question":"To implement runtime polymorphism, Java uses a mechanism called ____ method dispatch, where the method resolution is handled via an internal structure called a/an ____."
+        },
+        {
+            "id":5,
+            "marks":5,
+            "type":"qa",
+            "question":"Explain the concept of 'Composition over Inheritance' in Java. Why is it often preferred over class inheritance, and how does it promote loose coupling? Provide a short code example scenario."
+        }
+    ]
+}

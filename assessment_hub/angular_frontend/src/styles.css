@@ -1,0 +1,413 @@
+@import 'tailwindcss';
+
+@theme {
+    /* ---------- Brand colors ---------- */
+    --color-primary: #2563EB;
+    --color-primary-hover: #1D4ED8;
+    --color-primary-active: #1E40AF;
+    --color-primary-subtle: #EFF6FF;
+
+    /* ---------- Neutral colors ---------- */
+    --color-bg: #FFFFFF;
+    --color-bg-alt: #F9FAFB;
+    --color-surface: #FFFFFF;
+
+    /* ---------- Dark surface ---------- */
+    --color-bg-dark: #0F173F;
+
+    --color-border: #E5E7EB;
+    --color-border-strong: #D1D5DB;
+
+    --color-text: #111827;
+    --color-text-secondary: #6B7280;
+    --color-text-muted: #9CA3AF;
+    --color-text-inverse: #FFFFFF;
+
+    /* ---------- Interaction ---------- */
+    --color-hover: #F9FAFB;
+    --color-overlay: rgba(17, 24, 39, 0.45);
+
+    /* translucent hover washes that work on any toast color */
+    --color-hover-tint: rgba(17, 24, 39, 0.06);
+    --color-hover-tint-strong: rgba(17, 24, 39, 0.10);
+
+    /* ---------- Status colors ---------- */
+    --color-success: #16A34A;
+    --color-success-bg: #F0FDF4;
+    --color-warning: #D97706;
+    --color-warning-bg: #FFFBEB;
+    --color-error: #DC2626;
+    --color-error-bg: #FEF2F2;
+    --color-info: #0284C7;
+    --color-info-bg: #F0F9FF;
+
+    /* ---------- Live/exam accents (new semantic tokens) ---------- */
+    --color-tint-pale: #FAF9F4;    /* student answer pane tint */
+    --color-live-ok: #4ADE80;      /* status colors tuned for dark surfaces */
+    --color-live-warn: #FBBF24;
+    --color-live-critical: #F87171;
+
+    /* darker variants so white text passes contrast on solid fills */
+    --color-success-strong: #15803D; /* green-700 */
+    --color-info-strong:    #0369A1; /* sky-700 */
+    --color-warning-strong: #B45309; /* amber-700 */
+    --color-error-strong:   #B91C1C; /* red-700 */
+
+    /* ---------- Pager accents (pagination direction buttons) ---------- */
+    --color-pager-prev: #C2410C;
+    --color-pager-prev-hover: #9A3412;
+    --color-pager-prev-active: #7C2D12;
+
+    --color-pager-next: #15803D;
+    --color-pager-next-hover: #166534;
+    --color-pager-next-active: #14532D;
+
+    /* ---------- Typography ---------- */
+    --font-sans:
+        Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --font-mono:
+        ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+        "Liberation Mono", monospace;
+
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-base: 16px;
+    --text-lg: 18px;
+    --text-xl: 20px;
+    --text-2xl: 24px;
+    --text-3xl: 30px;
+
+    /* font-medium, font-semibold, ... */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* leading-tight, leading-normal, leading-relaxed */
+    --leading-tight: 1.25;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.7;
+
+    /* ---------- Border radius ---------- */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-full: 9999px;
+
+    /* ---------- Layout ---------- */
+    --container-page: 1200px; /* → max-w-page */
+    
+    --animate-rise-in: rise-in 0.18s ease-out both;
+    @keyframes rise-in {
+        from { opacity: 0; transform: translateY(6px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    --animate-fade-in: fade-in 0.15s ease-out both;
+    @keyframes fade-in {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* ---------- Toast animation ----------- */
+    --animate-toast-in: toast-slide-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+    @keyframes toast-slide-in {
+        from {
+            transform: translateY(-110%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* ---------- Dropdown animation ----------- */
+    --animate-menu-in: menu-in 0.15s ease-out both;
+    @keyframes menu-in {
+        from {
+            opacity: 0;
+            transform: translateY(-4px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+}
+
+:root {
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+
+    --container-padding-x: 24px;
+    --container-padding-y: 24px;
+
+    --border-width: 1px;
+    --border-width-strong: 2px;
+
+    --focus-ring-color: #2563EB;
+    --focus-ring-width: 2px;
+    --focus-ring-offset: 2px;
+
+    --navbar-height: 64px;
+    --button-height: 40px;
+    --input-height: 40px;
+
+    --toast-min-width: 280px;
+    --toast-max-width: 480px;
+
+    --modal-width: 480px;
+    --modal-width-lg: 640px;
+    --modal-width-xl: 960px;
+    
+    --modal-height-xl: 85vh;
+    --modal-description-max-height: 280px;
+}
+
+@layer base {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+
+        background: var(--color-bg);
+        color: var(--color-text);
+
+        font-family: var(--font-sans);
+        font-size: var(--text-base);
+        font-weight: var(--font-weight-normal);
+        line-height: var(--leading-normal);
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+        font: inherit;
+    }
+
+    button,
+    a {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    a {
+        color: var(--color-primary);
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: var(--color-primary-hover);
+        text-decoration: underline;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        color: var(--color-text);
+        line-height: var(--leading-tight);
+    }
+
+    h1 {
+        font-size: var(--text-3xl);
+        font-weight: var(--font-weight-bold);
+    }
+
+    h2 {
+        font-size: var(--text-2xl);
+        font-weight: var(--font-weight-semibold);
+    }
+
+    h3 {
+        font-size: var(--text-lg);
+        font-weight: var(--font-weight-semibold);
+    }
+
+    p {
+        margin-top: 0;
+    }
+
+    .field {
+        height: var(--input-height);
+        width: 100%;
+        border: var(--border-width) solid var(--color-border);
+        border-radius: var(--radius-sm);
+        background: var(--color-bg);
+        padding-inline: var(--space-3);
+        font-size: var(--text-sm);
+        color: var(--color-text);
+    }
+    .field::placeholder { color: var(--color-text-muted); }
+    .field:focus { border-color: var(--color-border-strong); }
+    .field:disabled { background: var(--color-bg-alt); color: var(--color-text-muted); }
+
+    .field-area {
+        height: auto;
+        padding-block: var(--space-2);
+        line-height: var(--leading-normal);
+        resize: vertical;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+        outline: var(--focus-ring-width) solid var(--focus-ring-color);
+        outline-offset: var(--focus-ring-offset);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            scroll-behavior: auto !important;
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+}
+
+@layer components {
+    .page-container {
+        width: 100%;
+        max-width: var(--container-page);
+        margin-inline: auto;
+        padding-inline: var(--container-padding-x);
+    }
+
+    .section {
+        padding-block: var(--space-16);
+    }
+    /* --- add inside @layer components --- */
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-2);
+        height: var(--button-height);
+        padding-inline: var(--space-4);
+        border: var(--border-width) solid transparent;
+        border-radius: var(--radius-sm);
+        font-size: var(--text-sm);
+        font-weight: var(--font-weight-medium);
+        cursor: pointer;
+        transition:
+            background-color 0.15s ease,
+            color 0.15s ease,
+            border-color 0.15s ease;
+    }
+
+    .btn:disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+    }
+
+    .btn-primary {
+        background: var(--color-primary);
+        color: var(--color-text-inverse);
+    }
+    .btn-primary:hover:not(:disabled) { background: var(--color-primary-hover); }
+    .btn-primary:active:not(:disabled) { background: var(--color-primary-active); }
+
+    .btn-secondary {
+        background: var(--color-bg);
+        color: var(--color-text);
+        border-color: var(--color-border-strong);
+    }
+    .btn-secondary:hover:not(:disabled) { background: var(--color-bg-alt); }
+
+    .btn-danger {
+        background: var(--color-error);
+        color: var(--color-text-inverse);
+    }
+    .btn-danger:hover:not(:disabled) { background: var(--color-error-strong); }
+
+    /* Status action buttons (message moderation) — solid fill, dark step on hover */
+    .btn-success { background: var(--color-success); color: var(--color-text-inverse); }
+    .btn-success:hover:not(:disabled) { background: var(--color-success-strong); }
+
+    .btn-info { background: var(--color-info); color: var(--color-text-inverse); }
+    .btn-info:hover:not(:disabled) { background: var(--color-info-strong); }
+
+    .btn-warning { background: var(--color-warning); color: var(--color-text-inverse); }
+    .btn-warning:hover:not(:disabled) { background: var(--color-warning-strong); }
+
+    .btn-ghost { background: transparent; color: var(--color-text); }
+    .btn-ghost:hover:not(:disabled) { background: var(--color-hover); }
+
+    /* ---------- Badges ---------- */
+    .badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 2px var(--space-2);
+        border-radius: var(--radius-full);
+        font-size: var(--text-xs);
+        font-weight: var(--font-weight-medium);
+    }
+    .badge-success { background: var(--color-success-bg); color: var(--color-success-strong); }
+    .badge-error   { background: var(--color-error-bg);   color: var(--color-error-strong); }
+
+}
+
+@utility text-secondary {
+    color: var(--color-text-secondary);
+}
+
+@utility text-muted {
+    color: var(--color-text-muted);
+}
+
+@utility text-inverse {
+    color: var(--color-text-inverse);
+}
+
+@media (max-width: 600px) {
+    :root {
+        --container-padding-x: 16px;
+    }
+
+    h1 {
+        font-size: var(--text-2xl);
+    }
+
+    h2 {
+        font-size: var(--text-xl);
+    }
+
+    .section {
+        padding-block: var(--space-12);
+    }
+}
+
+/* ---------- Test mode (student exam/over pages): strip page chrome ---------- */
+body.test-mode app-navbar,
+body.test-mode app-footer {
+    display: none;
+}

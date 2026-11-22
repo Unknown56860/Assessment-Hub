@@ -1,0 +1,61 @@
+{
+    "assessment_id": 1,
+    "submissions": [
+        {
+            "23cseds001": {
+                "name": "StudentA",
+                "status": "DISCONNECTED",
+                "answers": [
+                    {
+                        "question_id": 1,
+                        "answer": ["B","C"]
+                    },
+                    {
+                        "question_id": 2,
+                        "answer": ["A"]
+                    },
+                    {
+                        "question_id": 3,
+                        "answer": ["unchecked","runtime"]
+                    },
+                    {
+                        "question_id": 4,
+                        "answer": ["dynamic","vtable"]
+                    },
+                    {
+                        "question_id": 5,
+                        "answer": "Composition over inheritance means it is usually better to build code by combining different parts rather than making long family trees of classes. Instead of creating a new class by extending an old one (the Is-A relationship), you simply give your class a reference to another object (the Has-A relationship) to reuse its code."
+                    }
+                ]
+            }
+        },
+        {
+            "23cseds002": {
+                "name": "StudentB",
+                "status": "KICKED",
+                "answers": [
+                    {
+                        "question_id": 1,
+                        "answer": ["B","C"]
+                    },
+                    {
+                        "question_id": 2,
+                        "answer": ["A"]
+                    },
+                    {
+                        "question_id": 3,
+                        "answer": ["unchecked","runtime"]
+                    },
+                    {
+                        "question_id": 4,
+                        "answer": ["dynamic","vtable"]
+                    },
+                    {
+                        "question_id": 5,
+                        "answer": "Composition over inheritance means it is usually better to build code by combining different parts rather than making long family trees of classes. Instead of creating a new class by extending an old one (the Is-A relationship), you simply give your class a reference to another object (the Has-A relationship) to reuse its code."
+                    }
+                ]
+            }
+        }
+    ]
+}

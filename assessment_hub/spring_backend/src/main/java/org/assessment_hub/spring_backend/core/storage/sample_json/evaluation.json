@@ -1,0 +1,58 @@
+{
+    "assessment_id": 2134,
+    "maximum_marks": 14,
+    "evaluations": [
+        {
+            "23cseds001": {
+                "marks": [
+                    {
+                        "question_id": 1,
+                        "marks": 2
+                    },
+                    {
+                        "question_id": 2,
+                        "marks": 0
+                    },
+                    {
+                        "question_id": 3,
+                        "marks": 1
+                    },
+                    {
+                        "question_id": 4,
+                        "marks": 2
+                    },
+                    {
+                        "question_id": 5,
+                        "marks": 0
+                    }
+                ]
+            }
+        },
+        {
+            "23cseds002": {
+                "marks": [
+                    {
+                        "question_id": 1,
+                        "marks": 2
+                    },
+                    {
+                        "question_id": 2,
+                        "marks": 0
+                    },
+                    {
+                        "question_id": 3,
+                        "marks": 1
+                    },
+                    {
+                        "question_id": 4,
+                        "marks": 2
+                    },
+                    {
+                        "question_id": 5,
+                        "marks": 0
+                    }
+                ]
+            }
+        }
+    ]
+}

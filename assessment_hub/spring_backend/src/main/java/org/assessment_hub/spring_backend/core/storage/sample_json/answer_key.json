@@ -1,0 +1,25 @@
+{
+    "question_set_id":1,
+    "answers":[
+        {
+            "id":1,
+            "correct_answer":["B","C"]
+        },
+        {
+            "id":2,
+            "correct_answer":["A","B","D"]
+        },
+        {
+            "id":3,
+            "correct_answer":["unchecked","runtime"]
+        },
+        {
+            "id":4,
+            "correct_answer":["dynamic","vtable"]
+        },
+        {
+            "id":5,
+            "sample_answer":"Composition over inheritance is a design principle where a class achieves polymorphic behavior and code reuse by containing references to other objects (Has-A relationship) instead of extending a parent class (Is-A relationship). It is preferred because inheritance breaks encapsulation (subclasses depend on the internal implementation details of the parent), creates tight coupling, and leads to class explosion. Composition allows behavior to be swapped dynamically at runtime by changing the contained instance, keeping classes loosely coupled. For example, a Car class containing an Engine object interface rather than extending a specific Engine type."
+        }
+    ]
+}
